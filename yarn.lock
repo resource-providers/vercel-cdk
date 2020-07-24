@@ -304,7 +304,7 @@ fs-extra@^8.1.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@^9.0.1:
+fs-extra@^9.0.0, fs-extra@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.0.1.tgz#910da0062437ba4c39fedd863f1675ccfefcb9fc"
   integrity sha512-h2iAoN838FqAFJY2/qVpzFXy+EBxfVE220PalAqQLDVsFOHLJrZvut5puAbCdNv6WJk+B8ihI+k0c7JK5erwqQ==
@@ -430,6 +430,16 @@ isarray@^2.0.5:
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-2.0.5.tgz#8af1e4c1221244cc62459faf38940d4e644a5723"
   integrity sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw==
 
+jsii-docgen@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-1.4.2.tgz#f8a3081b68ff6303cca9fbe70c9e9cec9cdb91a2"
+  integrity sha512-pn97Ty8pDbrrHYJKRH4nZTcUP5DcgvJPpS9wgZKAV3AGXYsmw3+pHb3p61dIv+dGEGB2xx37mdPodk8dIZaeow==
+  dependencies:
+    "@jsii/spec" "^1.9.0"
+    fs-extra "^9.0.0"
+    jsii-reflect "^1.9.0"
+    yargs "^15.4.1"
+
 jsii-pacmak@^1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/jsii-pacmak/-/jsii-pacmak-1.9.0.tgz#4acc92991e65a7d308a5d029c39fe78b0050abf5"
@@ -458,6 +468,11 @@ jsii-reflect@^1.9.0:
     fs-extra "^9.0.1"
     oo-ascii-tree "^1.9.0"
     yargs "^15.4.0"
+
+jsii-release@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/jsii-release/-/jsii-release-0.1.9.tgz#da139e68da8841d3f8ed5c0c64301dc3c326363b"
+  integrity sha512-aV6qHRjDr41ETEwtXm6cgxQ5rzbRdQ3iNvQ+gzayJT8Ke2UvRHrduY5XkdJ3ZZ5FWqRyxHpY/RCVW7DysT+9Xw==
 
 jsii-rosetta@^1.9.0:
   version "1.9.0"
@@ -805,7 +820,7 @@ yargs-parser@^18.1.2:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
 
-yargs@^15.4.0:
+yargs@^15.4.0, yargs@^15.4.1:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-15.4.1.tgz#0d87a16de01aee9d8bec2bfbf74f67851730f4f8"
   integrity sha512-aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A==

@@ -1,10 +1,6 @@
 import * as cdk from '@aws-cdk/core';
 import { RecordType, Record } from '../dns';
-
-export interface Owner {
-    apiKey: cdk.SecretValue;
-    teamId?: string;
-}
+import { Owner } from '../owner';
 
 export interface AddRecordOptions {
     name: string;
@@ -46,7 +42,7 @@ export class Domain extends DomainBase {
         return Domain.fromDomainAttributes(scope, id, { domainName })
     }
 
-    public static fromDomainAttributes(scope: cdk.Construct, id: string, attrs: DomainAttributes) {
+    public static fromDomainAttributes(scope: cdk.Construct, id: string, attrs: DomainAttributes): IDomain {
         class Import extends DomainBase {
             public readonly domainName = attrs.domainName;
         }
@@ -67,7 +63,7 @@ export class Domain extends DomainBase {
         this.domainName = props.domainName;
 
         const resource = new cdk.CfnResource(this, 'Resource', {
-            type: 'Vercel::Domain::Domain',
+            type: 'Vercel::Domains::Domain',
             properties: {
                 Name: props.domainName,
                 ApiKey: props.owner.apiKey.toString(),

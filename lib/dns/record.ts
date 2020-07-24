@@ -1,10 +1,6 @@
 import * as cdk from '@aws-cdk/core';
 import { Domain } from '../domains';
-
-export enum RecordType {
-    A='A',
-    AAAA='AAAA'
-}
+import { RecordType } from './record-types';
 
 export interface RecordProps {
     name: string;

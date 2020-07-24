@@ -1,20 +1,40 @@
 {
   "name": "vercel-cdk",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "repository": "git@github.com:wulfmann/vercel-cdk.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wulfmann/vercel-cdk.git"
+  },
   "author": "Joe Snell <joepsnell@gmail.com>",
   "license": "MIT",
-  "jsii": {},
+  "jsii": {
+    "outdir": "dist",
+    "targets": {
+      "python": {
+        "distName": "vercel-cdk",
+        "module": "vercel_cdk"
+      },
+
+      "dotnet": {
+        "namespace": "Vercel.Cdk",
+        "packageId": "Vercel.Cdk"
+      }
+    }
+  },
   "scripts": {
     "build": "jsii",
-    "package": "jsii-pacmak"
+    "package": "jsii-pacmak",
+    "docs": "jsii-docgen",
+    "all": "yarn build && yarn package && jsii-release"
   },
   "devDependencies": {
     "@aws-cdk/core": "^1.54.0",
     "jsii": "^1.9.0",
-    "jsii-pacmak": "^1.9.0"
+    "jsii-docgen": "^1.4.2",
+    "jsii-pacmak": "^1.9.0",
+    "jsii-release": "^0.1.9"
   },
   "peerDependencies": {
     "@aws-cdk/core": "^1.54.0"

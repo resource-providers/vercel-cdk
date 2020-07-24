@@ -1,1 +1,2 @@
-export { Record, RecordProps, RecordType } from './record';
+export { Record, RecordProps } from './record';
+export * from './record-types';
