@@ -32,12 +32,13 @@ export class Record extends RecordBase {
             type: 'Vercel::Dns::Record',
             properties: {
                 ApiKey: props.domain.owner.apiKey.toString(),
+                TeamId: props.domain.owner.teamId,
+
                 Domain: props.domain.domainName,
                 Name: props.name,
                 Type: props.type,
                 Value: props.value,
-                Ttl: props.ttl || 60,
-                TeamId: props.domain.owner.teamId
+                Ttl: props.ttl || 60
             }
         });
 

@@ -69,7 +69,9 @@ export class Domain extends DomainBase {
         const resource = new cdk.CfnResource(this, 'Resource', {
             type: 'Vercel::Domain::Domain',
             properties: {
-                Name: props.domainName
+                Name: props.domainName,
+                ApiKey: props.owner.apiKey.toString(),
+                TeamId: props.owner.teamId,
             }
         });
 
